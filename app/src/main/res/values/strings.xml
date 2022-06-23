@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">manageChats</string>
+    <string name="LoginText">Добрый день! Для входа в соц сеть, нажмите кнопку авторизоваться.</string>
+    <string name="login_enter_vk">Авторизоваться</string>
+    <string name="login_enter_tg">Telegram</string>
+    <string name="chat_find_hint">Поиск собеседника</string>
+    <string name="has_no_chats">Нет имеющихся переписок</string>
+    <string name="has_no_open">Ошибка в загрузке чата</string>
+    <string name="btn_txt_send_dialog">Отправить</string>
+    <string name="chat_send_hint">Написать сообщение</string>
+</resources>

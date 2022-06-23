@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DialogActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/txt_dialog_no_items"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+        <com.github.rahatarmanahmed.cpv.CircularProgressView
+            android:id="@+id/cpv_dialog"
+            android:layout_width="@dimen/loaded_size"
+            android:layout_height="@dimen/loaded_size"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:cpv_animAutostart="true"
+            app:cpv_color="@color/material_dynamic_neutral_variant20"
+            app:cpv_indeterminate="true" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginTop="298dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <EditText
+            android:id="@+id/editText_dialog"
+            style="@style/ThemeOverlay.Material3.TextInputEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+
+            android:hint="@string/chat_send_hint"
+            android:minHeight="48dp">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_send_dialog"
+            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            app:icon="@drawable/ic_send"
+            app:iconSize="36dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--            android:text="@string/btn_txt_send_dialog"-->
+        <!--            android:textSize="20dp"-->
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
